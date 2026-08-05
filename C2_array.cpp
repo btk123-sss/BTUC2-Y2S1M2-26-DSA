@@ -31,6 +31,27 @@ private:
 
 int main()
 {
+    GameEntry P1("Mike", 1105);
+    GameEntry P2("Rob", 750);
+    GameEntry P3("Paul", 720);
+    GameEntry P4("Anna", 660);
+    GameEntry P5("Rose", 590);
+    GameEntry P6("Jack", 510);
+
+    Scores ScoreBoard(10);
+
+    ScoreBoard.add(P4);
+    ScoreBoard.add(P5);
+    ScoreBoard.add(P6);
+    ScoreBoard.add(P1);
+    ScoreBoard.add(P2);
+    ScoreBoard.add(P3);
+
+    ScoreBoard.printList();
+
+    ScoreBoard.remove(1);
+    ScoreBoard.printList();
+
 }
 
 // Constructor
@@ -85,5 +106,12 @@ GameEntry Scores::remove(int i)
     return e;                        // return the removed object
 }
 
+
+void Scores::printList() const {
+    for (int i = 0; i < numEntries; i++){
+        cout << i+1 << ": " << entries[i].getName() << " : " << entries[i].getScore() << endl;
+    }
+
+}
 
 
