@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+// test 2
 
 class GameEntry
 { // a game score entry
