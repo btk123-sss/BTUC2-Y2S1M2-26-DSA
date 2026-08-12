@@ -18,8 +18,16 @@ void insertionSort(char *A, int n)  {
         A[j + 1] = cur; // this is the proper place for cur
     }
 }
-///  ?? complexity ->  O(?)
+///  ?? complexity ->  O(n^2)
 
+//     [9 , 7 , 6 , 5, 4 , 2]
+// {
+//         while ((j >= 0)) {                    
+//             j--;          /// run j times   (j = 0 ->  n-1 )     
+//         }
+
+// }
+//   f(n) =  0+ 1 + 2 + .. + n-1  = (n-1)(n-2)/2  = (1/2) n^2 + ...
 
 
 

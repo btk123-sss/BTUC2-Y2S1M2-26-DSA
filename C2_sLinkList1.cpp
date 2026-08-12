@@ -56,17 +56,32 @@ void StringLinkedList::removeFront(){
     delete old;             // delete the old head
 }
 
-
 int main(){
+    StringLinkedList My_travel;
 
+    My_travel.addFront("Texas");
+    My_travel.addFront("New york");
+    My_travel.addFront("Singapor");
+    My_travel.addFront("HCMC");
+
+    My_travel.print();
+    cout << endl;
+    
+    My_travel.removeFront();
+
+    My_travel.print();
 
     return 0;
 }
 
+
+
+
+
 void StringLinkedList::print() const {
     StringNode *curr = head;
     while (curr != NULL) {
-        cout << curr->elem << " -> ";
+        cout << curr->elem << " --> ";
         curr = curr->next;
     }
     cout << "NULL" << endl;
