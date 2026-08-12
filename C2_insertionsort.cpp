@@ -18,6 +18,7 @@ void insertionSort(char *A, int n)  {
         A[j + 1] = cur; // this is the proper place for cur
     }
 }
+///  ?? complexity ->  O(?)
 
 
 
@@ -30,7 +31,7 @@ int main() {
     for (int i = 0; i < studentnumber; i++){
         cout << grades[i] << " ";
     }
-    cout << endl;
+    cout << "\n\n";
 
 
     insertionSort(grades, studentnumber);
