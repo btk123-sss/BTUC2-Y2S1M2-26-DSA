@@ -59,6 +59,8 @@ void StringLinkedList::removeFront(){
 int main(){
     StringLinkedList My_travel;
 
+    //GenericList<sNode> My_list;
+
     My_travel.addFront("Texas");
     My_travel.addFront("New york");
     My_travel.addFront("Singapor");
