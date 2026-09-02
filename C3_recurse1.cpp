@@ -98,8 +98,8 @@ int main () {
 
     // cout << s1 << endl;
     // cout << s2 << endl;
-    m[0] = 0;
-    m[1] = 1;
+    // m[0] = 0;
+    // m[1] = 1;
 
     int N = 50;
     //cout << Fib(N) << endl;
