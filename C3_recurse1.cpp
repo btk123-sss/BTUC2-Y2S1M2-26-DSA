@@ -1,6 +1,7 @@
 
 #include <iostream>
 using namespace std;
+#include <map>
 
 // Factorial function using Loop (iteration)
 // n! =  n*(n-1)*(n-2)* .. *1
@@ -64,18 +65,42 @@ int BinarySum(int* A, int i, int n){
     }
 }
 
+// Fibonacci serie using Recursion
+int Fib(int n){
+    if (n <= 1) return n;
+    else return Fib(n-1) + Fib(n-2);
+}
+
+
+map <int, long long> m;
+// Fibonacci serie using Recursion and Memorization  -> runtime O(n)
+long long Fib2(int n)
+{
+    if (n <= 1)
+        return n;
+    if(n <= m.size()) return m[n];
+    else{
+        m[n] = Fib2(n - 1) + Fib2(n - 2);
+        return m[n];
+    }    
+}
+
 int main () {
     // printNtime(5, "Hello");
     // RecursionPrintNtime(6, "World!");
     // cout << f2(5) << endl;
 
-    int A[] = {7, 5, 4, 3, 1};
-    int s1 = LinearSum(A, 5);
+    // int A[] = {7, 5, 4, 3, 1};
+    // int s1 = LinearSum(A, 5);
 
-    int s2 = BinarySum(A, 0, 5);
+    // int s2 = BinarySum(A, 0, 5);
 
-    cout << s1 << endl;
-    cout << s2 << endl;
+    // cout << s1 << endl;
+    // cout << s2 << endl;
+
+    int N = 50;
+    //cout << Fib(N) << endl;
+    cout << Fib2(N) << endl;
 
     return 0;
 }
