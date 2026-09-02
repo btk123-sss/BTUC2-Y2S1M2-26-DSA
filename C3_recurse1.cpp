@@ -65,7 +65,7 @@ int BinarySum(int* A, int i, int n){
     }
 }
 
-// Fibonacci serie using Recursion
+// Fibonacci serie using Recursion -> runtime O(a^n)  // a = 1.618..
 int Fib(int n){
     if (n <= 1) return n;
     else return Fib(n-1) + Fib(n-2);
