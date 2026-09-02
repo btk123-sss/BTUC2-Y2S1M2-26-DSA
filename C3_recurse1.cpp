@@ -44,11 +44,38 @@ void RecursionPrintNtime(int n, const string& s){
     RecursionPrintNtime(n-1, s);
 }
 
+// Linear Recursion :  runtime = O(n)
+int LinearSum(int* A, int n){
+    if (n==1) return A[0];
+    else 
+        return LinearSum(A, n-1) + A[n-1];
+}
+
+// Binary Recursion  :  runtime = O(n) 
+int BinarySum(int* A, int i, int n){
+    if (n == 1)
+        return A[i];
+    else {
+        int j, k;
+        if(n%2==0) j = n/2;
+        else j = 1 + n/2;
+        k = n/2;
+        return BinarySum(A, i, j) + BinarySum(A, i+j, k);
+    }
+}
+
 int main () {
     // printNtime(5, "Hello");
     // RecursionPrintNtime(6, "World!");
     // cout << f2(5) << endl;
 
+    int A[] = {7, 5, 4, 3, 1};
+    int s1 = LinearSum(A, 5);
+
+    int s2 = BinarySum(A, 0, 5);
+
+    cout << s1 << endl;
+    cout << s2 << endl;
 
     return 0;
 }
