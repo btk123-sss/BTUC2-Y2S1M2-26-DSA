@@ -23,16 +23,19 @@ int f2(int n){
     else return n*f2(n-1);
 }
 
+
+// print one line
 void printLine(const string& s){
     cout << s << endl;
 }
 
+// Print n lines using loop
 void printNtime(int n, const string& s){
     for (int i=0; i< n; i++){
         printLine(s);
     }
 }
-
+// Print n lines using Recursion 
 void RecursionPrintNtime(int n, const string& s){
     cout << s << endl;
     if(n==1){
@@ -42,12 +45,9 @@ void RecursionPrintNtime(int n, const string& s){
 }
 
 int main () {
-
-    printNtime(5, "Hello");
-    RecursionPrintNtime(6, "World!");
-
-    cout << f2(5) << endl;
-
+    // printNtime(5, "Hello");
+    // RecursionPrintNtime(6, "World!");
+    // cout << f2(5) << endl;
 
 
     return 0;
