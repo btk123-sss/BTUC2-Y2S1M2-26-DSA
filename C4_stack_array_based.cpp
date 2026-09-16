@@ -3,10 +3,9 @@ using namespace std;
 
 template <typename E>
 class ArrayStack {
-    enum { DEF CAPACITY = 100
-    }; // default stack capacity
+    enum { DEF_CAPACITY = 100 }; // default stack capacity
 public:
-    ArrayStack(int cap = DEF CAPACITY); // constructor from capacity
+    ArrayStack(int cap = DEF_CAPACITY); // constructor from capacity
     int size() const;                   // number of items in the stack
     bool empty() const;                 // is the stack empty?
     const E &top() const;               // get the top element
@@ -35,20 +34,25 @@ bool ArrayStack<E>::empty() const
 template <typename E> 
 const E &ArrayStack<E>::top() const {
     if (empty())
-        throw exception("Top of empty stack");
+        throw string("Top of empty stack");
     return S[t];
 }
 
 template <typename E>
 void ArrayStack<E>::push(const E &e) {
     if (size() == capacity)
-        throw exception("Push to full stack");
+        throw string("Push to full stack");
     S[++t] = e;
 }
 
 template <typename E>
 void ArrayStack<E>::pop() {
     if (empty())
-        throw exception("Pop from empty stack");
+        throw string("Pop from empty stack");
     --t;
+}
+
+int main(){
+
+    
 }
