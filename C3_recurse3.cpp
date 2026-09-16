@@ -11,7 +11,7 @@ void print_all_strings(int n, const vector<char>& char_set, string& word){
         cout << number << "\n"; 
         return;
     }
-    // recursion with backtracking
+    // Backtracking with recursion
     for (int i = 0; i < char_set.size(); i++){
         word.push_back(char_set[i]);
         print_all_strings(n, char_set, word);

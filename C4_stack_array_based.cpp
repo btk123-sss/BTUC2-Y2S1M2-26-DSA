@@ -21,39 +21,33 @@ private:          // member data
 
 template <typename E>
 ArrayStack<E>::ArrayStack(int cap)
-    : S(new E[cap]), capacity(cap), t(-1) {} // constructor from capacity
+    : S(new E[cap]), capacity(cap), t(-1) {} 
 
 template <typename E>
 int ArrayStack<E>::size() const
-{
-    return (t + 1);
-} // number of items in the stack
+{ return (t + 1); }
 
 template <typename E>
 bool ArrayStack<E>::empty() const
-{
-    return (t < 0);
-}                     // is the stack empty?
+{ return (t < 0); }
 
-template <typename E> // return top of stack
-const E &ArrayStack<E>::top() const
-{
+// return top of stack
+template <typename E> 
+const E &ArrayStack<E>::top() const {
     if (empty())
         throw exception("Top of empty stack");
     return S[t];
 }
 
-template <typename E> // push element onto the stack
-void ArrayStack<E>::push(const E &e)
-{
+template <typename E>
+void ArrayStack<E>::push(const E &e) {
     if (size() == capacity)
         throw exception("Push to full stack");
     S[++t] = e;
 }
 
-template <typename E> // pop the stack
-void ArrayStack<E>::pop()
-{
+template <typename E>
+void ArrayStack<E>::pop() {
     if (empty())
         throw exception("Pop from empty stack");
     --t;
