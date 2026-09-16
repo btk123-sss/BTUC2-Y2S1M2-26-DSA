@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void print_all_strings(int n, const vector<char> char_set, string& word){
+void print_all_strings(int n, const vector<char>& char_set, string& word){
     // base case 
     if (word.length() == n){
         cout << word << "\n";
@@ -19,7 +19,7 @@ void print_all_strings(int n, const vector<char> char_set, string& word){
     }
 }
 
-void print_all_strings_nonrepeat(int n, const vector<char> char_set, 
+void print_all_strings_nonrepeat(int n, const vector<char>& char_set, 
     string &word, vector<bool>& used)  {
     // base case
     if (word.length() == n)
