@@ -43,8 +43,7 @@ void print_all_strings_nonrepeat(int n, const vector<char>& char_set,
 
 
 
-int main()
-{
+int main() {
     vector<char> K = {'1', '2', '3'};
     int n = 3;
     string word;
