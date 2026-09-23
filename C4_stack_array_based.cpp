@@ -11,12 +11,12 @@ public:
     const E &top() const;               // get the top element
     void push(const E &e);              // push element onto stack
     void pop();                         // pop the stack
-
 private:          // member data
     E *S;         // array of stack elements
     int capacity; // stack capacity
     int t;        // index of the top of the stack
 };
+
 
 template <typename E>
 ArrayStack<E>::ArrayStack(int cap)
@@ -54,5 +54,33 @@ void ArrayStack<E>::pop() {
 
 int main(){
 
-    
+    ArrayStack<string> TaskList(10);
+    cout << TaskList.empty() << endl;
+
+    TaskList.push("Wake up!");
+    TaskList.push("Take shower");
+    TaskList.push("Cook breakfast");
+    TaskList.push("Do house work!");
+    cout << TaskList.size() << endl;
+    // try{
+    //     TaskList.push("Wake up!");
+    //     TaskList.push("Take shower");
+    //     TaskList.push("Cook breakfast");
+    //     TaskList.push("Do house work!");
+    //     TaskList.push("Wake up!");
+    //     TaskList.push("Take shower");
+    //     TaskList.push("Cook breakfast");
+    //     TaskList.push("Do house work!");
+    // }
+    // catch (const string& s){
+    //     cout << s << endl;
+    // }
+
+    cout << TaskList.top() << endl;
+
+    while(!TaskList.empty())
+    {
+        cout << TaskList.top() << endl;
+        TaskList.pop();
+    }    
 }

@@ -1,9 +1,33 @@
 #include <iostream>
+
+
+
+// STL : standard template library
 #include <stack>
+#include <vector>   // dynamic array
+#include <list>     // double linked list
+#include <forward_list> // singly linked list 
+
 
 using std::stack, std::string, std::cout;
 
 int main(){
+
+    std::vector<int> v;
+    v.push_back(55);
+    cout << v[0] << std::endl; 
+
+    v.pop_back();
+
+    // insertAt(k, obj);
+    // 
+    // List.insertAt(3, "Apple"); 
+    // Replace 
+
+    // Insert: push, add, push_back, push_front ..
+    // Remove: delete, pop ..
+    // Access: search, .. top 
+
 
     stack<int> NumStack;
     NumStack.push(11);
