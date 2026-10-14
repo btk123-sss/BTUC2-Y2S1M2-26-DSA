@@ -29,3 +29,27 @@ int main() {
     cout << "Expression : " << Expression4 << " is "
          << Test_expression(Expression4) << endl;
 }
+
+// X = Person();
+// Person X = 
+// X: Person 
+
+// int 
+// string
+// float 
+// let x = 5;
+// x = "Hello";
+
+// let x: number = 5;
+
+// int 1 
+// string x11 
+
+// stack   -> STL : standard template library 
+// stack<char> s;
+// s.push('A');
+
+// stack<int>
+// stack<Person> student; 
+// student.Add() 
+
