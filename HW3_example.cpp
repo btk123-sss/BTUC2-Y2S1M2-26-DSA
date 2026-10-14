@@ -4,9 +4,9 @@
 using std::cout, std::endl, std::string;
 
 
-bool Test_expression(const string& Expr){
+string Test_expression(const string& Expr){
 
-    return true;
+    return  "Valid";
 }
 
 int main() {
@@ -16,13 +16,16 @@ int main() {
     string Expression3 = "(A + {3*4} - C) / [D - F]";
     string Expression4 = ") A  + C (  - { [ D + F }  ]";
 
-    string valid_or_not;
-    if (Test_expression) valid_or_not = "Valid";
-    else
-        valid_or_not = "Not valid";
 
     cout << "Expression : " << Expression << " is "
-    << valid_or_not << endl;
+    << Test_expression(Expression) << endl;
 
+    cout << "Expression : " << Expression2 << " is "
+         << Test_expression(Expression2) << endl;
 
+    cout << "Expression : " << Expression3 << " is "
+         << Test_expression(Expression3) << endl;
+
+    cout << "Expression : " << Expression4 << " is "
+         << Test_expression(Expression4) << endl;
 }
